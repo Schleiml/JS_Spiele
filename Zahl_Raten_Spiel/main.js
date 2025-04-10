@@ -9,7 +9,10 @@ function Input_saver() {
     else if (Inhalt < ZahlR) {
         document.getElementById("Punkte").innerHTML = "Zu Klein!"
     }
-    else {
+    else if (Inhalt == ZahlR) {
         document.getElementById("Punkte").innerHTML = "Richtig!"
+    }
+    else {
+        document.getElementById("Punkte").innerHTML = "Error!"
     }
 }
