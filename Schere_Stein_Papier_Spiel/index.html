@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schere,Stein,Papier</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
-    <button id="Schere">Schere</button>
-    <button id="Papier">Papier</button>
-    <button id="stein">Stein</button>
+    <button onclick="Schere_isPressed()" id="Schere">Schere</button>
+    <button onclick="Papier_isPressed()" id="Papier">Papier</button>
+    <button onclick="Stein_isPressed()" id="Stein">Stein</button>
     <p id="Vergleich">Stein : Schere</p>
     <p id="Ausgang">Sieg!</p>
+    <button onclick="Choosing()" id="Auswahl_Opp">Bot</button>
     <button id="weiter">Weiter</button>
 </body>
 </html>
