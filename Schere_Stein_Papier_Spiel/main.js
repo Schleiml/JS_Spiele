@@ -1,4 +1,5 @@
 let Auswahl;
+let PC_Auswahl;
 
 function Schere_isPressed() {
     Auswahl = "Schere";
@@ -16,7 +17,7 @@ function Papier_isPressed() {
     console.log("Meine Auswahl: " + Auswahl);
 }
 function Choosing() {
-    let PC_Auswahl = Math.floor(Math.random() * 3) + 1;
+    PC_Auswahl = Math.floor(Math.random() * 3) + 1;
     if (PC_Auswahl == 1) {
         PC_Auswahl = "Schere";
     } else if (PC_Auswahl == 2) {
@@ -25,4 +26,20 @@ function Choosing() {
         PC_Auswahl = "Papier";
     }
     console.log("Bot Auswahl: " + PC_Auswahl);
+}
+function Check() {
+    if (Auswahl == PC_Auswahl) {
+        console.log("Unentschieden!");
+        document.getElementById("Ausgang").innerHTML = "Unentschieden!";
+    } else if (
+        (Auswahl == "Schere" && PC_Auswahl == "Papier") ||
+        (Auswahl == "Stein" && PC_Auswahl == "Schere") ||
+        (Auswahl == "Papier" && PC_Auswahl == "Stein")
+    ) {
+        console.log("Du hast gewonnen!");
+        document.getElementById("Ausgang").innerHTML = "Du hast gewonnen!";
+    } else {
+        console.log("Du hast verloren!");
+        document.getElementById("Ausgang").innerHTML = "Du hast verloren!";
+    }
 }
